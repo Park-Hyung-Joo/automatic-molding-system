@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+
+            button {
+                background-color: purple;
+            }
+
+            .box {
+                border: solid blue 1px;
+                padding: 0.5rem;
+            }
+
+            .box > p {
+                font-weight: bold;
+            }
+
+            input {
+                width: 5rem;
+            }
+
+            .value { 
+                display: inline-block;
+                margin: 0.3rem;
+                border: solid red 0.5px;
+                width: 45px;
+            }
+
+            .temp-table td, .out-table td{
+                border-right: solid purple 0.5px;
+                border-left: solid purple 0.5px;
+                border-collapse : collapse;
+                text-align: center;
+                padding: 0 0.3rem;
+                width: 3rem;
+            }
+
+            .has-message {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">
+            <div class="box" style="padding: 0;">
+                <p :class="msg ? 'has-message' : ''" style="margin: 0;">{{msg}}</p>
+            </div>
+            <div class="box">
+                <p>포트 연결</p>
+                <span>포트 이름 : </span><input type="text" v-model="portName">
+                <span>포트 보드레이트 : </span><input type="text" v-model="portBaud">
+                <button @click="portConnect">연결</button>
+                <button @click="portDisconnect">해제</button>
+            </div>
+            <div class="box">
+                <p>다중 히터 제어</p>
+                <span>시작 히터 번호</span><input type="text" v-model="varValue[1]">
+                <span>종료 히터 번호</span><input type="text" v-model="varValue[2]">
+                <span>제어량</span><input type="text" v-model="varValue[3]">
+                <button @click="varControl(2)">전체 적용</button>
+            </div>
+            <div class="box">
+                <p>모터 제어</p>
+                <span>제어 시간 (ms)</span><input type="text" v-model="varValue[1]">
+                <button @click="varControl(3, 1)">UP</button>
+                <button @click="varControl(3, 2)">DOWN</button>
+            </div>
+            <div class="box">
+                <p>제어 모드</p>
+                <button @click="varControl(4, 0)">수동</button>
+                <button @click="varControl(4, 1)">자동</button>
+            </div>
+            <div class="box">
+                <p>다중 목표 온도 제어</p>
+                <span>시작 히터 번호</span><input type="text" v-model="varValue[1]">
+                <span>종료 히터 번호</span><input type="text" v-model="varValue[2]">
+                <span>목표 온도</span><input type="text" v-model="varValue[3]">
+                <button @click="varControl(5)">전체 적용</button>
+            </div>
+            <p>온도 (목표 온도) :</p>
+            <table class="temp-table">
+                <tr>
+                    <td v-for="(t, i) in temp">#{{i+1}}</td>
+                </tr>
+                <tr>
+                    <td v-for="(t, i) in temp">{{t}}({{targetTemp[i]}})</td>
+                </tr>
+            </table>
+            <p>히터 출력 (제어 모드) :</p>
+            <table class="out-table">
+                <tr>
+                    <td v-for="(t, i) in out">#{{i+1}}</td>
+                </tr>
+                <tr>
+                    <td v-for="(t, i) in out">{{t}}({{mode[i] == 0 ? "수": "자"}})</td>
+                </tr>
+            </table>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

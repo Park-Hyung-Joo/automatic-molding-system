@@ -1,0 +1,109 @@
+<html>
+    <head>
+		<meta charset="UTF-8">
+    	<title>Automated SheetPress</title>
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.css">
+		<link rel="stylesheet" href="./style.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://kit.fontawesome.com/c13176f9e9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="box" style="padding: 0;">
+                <p :class="msg ? 'has-message' : ''" style="margin: 0;">{{msg}}</p>
+            </div>
+			<section class="box">
+				<div class="columns">
+					<div class="column">
+						<input class="input" type="text" placeholder="Port Name" v-model="portName">
+					</div>
+					<div class="column">
+						<input class="input" type="text" placeholder="Port Baud" v-model="portBaud">
+					</div>
+					<div class="column">
+						<button class="button" @click="portConnect">Connect</button>
+					</div>
+				</div>
+			</section>
+			<section class="box">
+				<div class="buttons">
+				<button class="button" v-for="preset in presets" @click="target = preset.target">
+					<span class="icon"><i class="fas" v-bind:class="'fa-' + (preset.icon || 'recycle')"></i></span><span>{{preset.name}}</span>
+				</button>
+			</div>
+			</section>
+			<section class="box">
+				<div>
+					<span>Time Left:</span>
+					<span id="timer">{{Math.floor(timeLeft/60)}}:{{("0" + (timeLeft%60)).slice(-2)}}</span>
+				</div>
+				<div class="buttons">
+					<button class="button" @click="addTime(1800)">+30m</button>
+					<button class="button" @click="addTime(600)">+10m</button>
+					<button class="button" @click="addTime(300)">+5m</button>
+					<button class="button" @click="addTime(60)">+1m</button>
+					<button class="button" @click="addTime(30)">+30s</button>
+				</div>
+				<div class="buttons">
+					<button class="button" @click="addTime(-1800)">-30m</button>
+					<button class="button" @click="addTime(-600)">-10m</button>
+					<button class="button" @click="addTime(-300)">-5m</button>
+					<button class="button" @click="addTime(-60)">-1m</button>
+					<button class="button" @click="addTime(-30)">-30s</button>
+				</div>
+			</section>
+			<section class="tile is-ancestor">
+				<div class="tile is-half is-parent is-vertical">
+					<div class="tile is-child" style="text-align: center">TOP</div>
+					<div class="tile is-child" style="padding: 0px 40px">
+						<div class="columns is-multiline is-flex-mobile">
+							<div class="column block is-4 is-narrow is-4-mobile" v-for="pos in top">
+								<div class="temperature-box box" @click="heat(pos.argh, 10-out[pos.argh])">
+									<div><b>#{{ pos.tag }}({{ pos.argh }})</b></div>
+									<!--<div>{{ target }}℃</div>-->
+									<div>{{ Math.floor(temp[pos.argt]) }}℃({{targetTemp[pos.argh]}}℃)</div>
+									<div>{{ out[pos.argh] }}/10({{mode[pos.argh] == 0 ? "Manual": "Auto"}})</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tile is-half is-parent is-vertical">
+					<div class="tile is-child" style="text-align: center">BOTTOM</div>
+					<div class="tile is-child" style="padding: 0px 40px">
+						<div class="columns is-multiline is-flex-mobile">
+							<div class="column block is-4 is-narrow is-4-mobile" v-for="pos in bot">
+								<div class="temperature-box box" @click="heat(pos.argh, 10-out[pos.argh])">
+									<div><b>#{{ pos.tag }}({{ pos.argh }})</b></div>
+									<!--<div>{{ target }}℃</div>-->
+									<div>{{ Math.floor(temp[pos.argt]) }}℃({{targetTemp[pos.argh]}}℃)</div>
+									<div>{{ out[pos.argh] }}/10({{mode[pos.argh] == 0 ? "Manual": "Auto"}})</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+            <div class="box">
+                <p>히터 제어</p>
+                <span>히터 번호</span><input type="text" v-model="varValue[1]">
+                <span>제어량</span><input type="text" v-model="varValue[2]">
+                <button @click="varControl(1)">개별 적용</button>
+            </div>
+            <div class="box">
+                <p>다중 히터 제어</p>
+                <span>시작 히터 번호</span><input type="text" v-model="varValue[1]">
+                <span>종료 히터 번호</span><input type="text" v-model="varValue[2]">
+                <span>제어량</span><input type="text" v-model="varValue[3]">
+                <button @click="varControl(2)">전체 적용</button>
+            </div>
+            <div class="box">
+                <p>모터 제어</p>
+                <button @click="varControl(3, 1)">UP</button>
+                <button @click="varControl(3, 2)">DOWN</button>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

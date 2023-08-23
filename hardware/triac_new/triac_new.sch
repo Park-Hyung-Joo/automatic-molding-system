@@ -1,0 +1,621 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Relay_SolidState:MOC3021M U5
+U 1 1 60167705
+P 6240 1330
+F 0 "U5" H 6240 1655 50  0000 C CNN
+F 1 "MOC3021M" H 6240 1564 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 6040 1130 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 6240 1330 50  0001 L CNN
+	1    6240 1330
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q5
+U 1 1 60168342
+P 7190 1380
+F 0 "Q5" H 7318 1426 50  0000 L CNN
+F 1 "BTA16-800BW" H 7318 1335 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7390 1305 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 7190 1380 50  0001 L CNN
+	1    7190 1380
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 601693E6
+P 6890 1230
+F 0 "R11" V 6683 1230 50  0000 C CNN
+F 1 "200" V 6774 1230 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6820 1230 50  0001 C CNN
+F 3 "~" H 6890 1230 50  0001 C CNN
+	1    6890 1230
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7040 1230 7190 1230
+Wire Wire Line
+	6740 1230 6540 1230
+Wire Wire Line
+	6540 1430 6540 1480
+Wire Wire Line
+	6540 1480 7040 1480
+$Comp
+L Device:R R9
+U 1 1 6016B093
+P 5640 1230
+F 0 "R9" V 5433 1230 50  0000 C CNN
+F 1 "100" V 5524 1230 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5570 1230 50  0001 C CNN
+F 3 "~" H 5640 1230 50  0001 C CNN
+	1    5640 1230
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5790 1230 5940 1230
+$Comp
+L power:GND #PWR06
+U 1 1 6016B9D7
+P 5940 1580
+F 0 "#PWR06" H 5940 1330 50  0001 C CNN
+F 1 "GND" H 5945 1407 50  0000 C CNN
+F 2 "" H 5940 1580 50  0001 C CNN
+F 3 "" H 5940 1580 50  0001 C CNN
+	1    5940 1580
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5940 1430 5940 1580
+Connection ~ 7190 1230
+Wire Wire Line
+	5190 1230 5490 1230
+Wire Wire Line
+	7190 780  7190 1230
+Wire Wire Line
+	7540 1530 7190 1530
+$Comp
+L Connector:Screw_Terminal_01x06 J5
+U 1 1 609A931A
+P 8180 980
+F 0 "J5" H 8260 972 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 8260 881 50  0000 L CNN
+F 2 "newTerminal:BR_762K_6pin" H 8180 980 50  0001 C CNN
+F 3 "~" H 8180 980 50  0001 C CNN
+	1    8180 980 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_SolidState:MOC3021M U6
+U 1 1 609AD232
+P 6250 2120
+F 0 "U6" H 6250 2445 50  0000 C CNN
+F 1 "MOC3021M" H 6250 2354 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 6050 1920 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 6250 2120 50  0001 L CNN
+	1    6250 2120
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q6
+U 1 1 609AD238
+P 7200 2170
+F 0 "Q6" H 7328 2216 50  0000 L CNN
+F 1 "BTA16-800BW" H 7328 2125 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7400 2095 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 7200 2170 50  0001 L CNN
+	1    7200 2170
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 609AD23E
+P 6900 2020
+F 0 "R12" V 6693 2020 50  0000 C CNN
+F 1 "200" V 6784 2020 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 6830 2020 50  0001 C CNN
+F 3 "~" H 6900 2020 50  0001 C CNN
+	1    6900 2020
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 2020 7200 2020
+Wire Wire Line
+	6750 2020 6550 2020
+Wire Wire Line
+	6550 2220 6550 2270
+Wire Wire Line
+	6550 2270 7050 2270
+$Comp
+L Device:R R10
+U 1 1 609AD248
+P 5650 2020
+F 0 "R10" V 5443 2020 50  0000 C CNN
+F 1 "100" V 5534 2020 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 5580 2020 50  0001 C CNN
+F 3 "~" H 5650 2020 50  0001 C CNN
+	1    5650 2020
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5800 2020 5950 2020
+$Comp
+L power:GND #PWR07
+U 1 1 609AD24F
+P 5950 2370
+F 0 "#PWR07" H 5950 2120 50  0001 C CNN
+F 1 "GND" H 5955 2197 50  0000 C CNN
+F 2 "" H 5950 2370 50  0001 C CNN
+F 3 "" H 5950 2370 50  0001 C CNN
+	1    5950 2370
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2220 5950 2370
+Wire Wire Line
+	5200 2020 5500 2020
+Wire Wire Line
+	7200 2020 7740 2020
+Connection ~ 7200 2020
+Wire Wire Line
+	7200 2320 7980 2320
+Wire Wire Line
+	7190 780  7980 780 
+Wire Wire Line
+	7540 1180 7540 1530
+Wire Wire Line
+	7980 2320 7980 1280
+Wire Wire Line
+	7980 1180 7540 1180
+Wire Wire Line
+	7740 2020 7740 980 
+Wire Wire Line
+	7740 980  7980 980 
+Connection ~ 7980 1180
+Wire Wire Line
+	7980 1080 7980 1180
+Connection ~ 7980 980 
+Wire Wire Line
+	7980 880  7980 980 
+$Comp
+L Relay_SolidState:MOC3021M U1
+U 1 1 609D8DFF
+P 2000 1440
+F 0 "U1" H 2000 1765 50  0000 C CNN
+F 1 "MOC3021M" H 2000 1674 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 1800 1240 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 2000 1440 50  0001 L CNN
+	1    2000 1440
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q1
+U 1 1 609D8E05
+P 2950 1490
+F 0 "Q1" H 3078 1536 50  0000 L CNN
+F 1 "BTA16-800BW" H 3078 1445 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3150 1415 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 2950 1490 50  0001 L CNN
+	1    2950 1490
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 609D8E0B
+P 2650 1340
+F 0 "R5" V 2443 1340 50  0000 C CNN
+F 1 "200" V 2534 1340 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2580 1340 50  0001 C CNN
+F 3 "~" H 2650 1340 50  0001 C CNN
+	1    2650 1340
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2800 1340 2950 1340
+Wire Wire Line
+	2500 1340 2300 1340
+Wire Wire Line
+	2300 1540 2300 1590
+Wire Wire Line
+	2300 1590 2800 1590
+$Comp
+L Device:R R1
+U 1 1 609D8E15
+P 1400 1340
+F 0 "R1" V 1193 1340 50  0000 C CNN
+F 1 "100" V 1284 1340 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1330 1340 50  0001 C CNN
+F 3 "~" H 1400 1340 50  0001 C CNN
+	1    1400 1340
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 1340 1700 1340
+$Comp
+L power:GND #PWR01
+U 1 1 609D8E1C
+P 1700 1690
+F 0 "#PWR01" H 1700 1440 50  0001 C CNN
+F 1 "GND" H 1705 1517 50  0000 C CNN
+F 2 "" H 1700 1690 50  0001 C CNN
+F 3 "" H 1700 1690 50  0001 C CNN
+	1    1700 1690
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1540 1700 1690
+Connection ~ 2950 1340
+Wire Wire Line
+	950  1340 1250 1340
+Wire Wire Line
+	2950 890  2950 1340
+Wire Wire Line
+	3300 1640 2950 1640
+$Comp
+L Connector:Screw_Terminal_01x06 J3
+U 1 1 609D8E29
+P 3940 1090
+F 0 "J3" H 4020 1082 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 4020 991 50  0000 L CNN
+F 2 "newTerminal:BR_762K_6pin" H 3940 1090 50  0001 C CNN
+F 3 "~" H 3940 1090 50  0001 C CNN
+	1    3940 1090
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_SolidState:MOC3021M U2
+U 1 1 609D8E2F
+P 2010 2230
+F 0 "U2" H 2010 2555 50  0000 C CNN
+F 1 "MOC3021M" H 2010 2464 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 1810 2030 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 2010 2230 50  0001 L CNN
+	1    2010 2230
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q2
+U 1 1 609D8E35
+P 2960 2280
+F 0 "Q2" H 3088 2326 50  0000 L CNN
+F 1 "BTA16-800BW" H 3088 2235 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3160 2205 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 2960 2280 50  0001 L CNN
+	1    2960 2280
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 609D8E3B
+P 2660 2130
+F 0 "R6" V 2453 2130 50  0000 C CNN
+F 1 "200" V 2544 2130 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2590 2130 50  0001 C CNN
+F 3 "~" H 2660 2130 50  0001 C CNN
+	1    2660 2130
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2810 2130 2960 2130
+Wire Wire Line
+	2510 2130 2310 2130
+Wire Wire Line
+	2310 2330 2310 2380
+Wire Wire Line
+	2310 2380 2810 2380
+$Comp
+L Device:R R2
+U 1 1 609D8E45
+P 1410 2130
+F 0 "R2" V 1203 2130 50  0000 C CNN
+F 1 "100" V 1294 2130 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1340 2130 50  0001 C CNN
+F 3 "~" H 1410 2130 50  0001 C CNN
+	1    1410 2130
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1560 2130 1710 2130
+$Comp
+L power:GND #PWR02
+U 1 1 609D8E4C
+P 1710 2480
+F 0 "#PWR02" H 1710 2230 50  0001 C CNN
+F 1 "GND" H 1715 2307 50  0000 C CNN
+F 2 "" H 1710 2480 50  0001 C CNN
+F 3 "" H 1710 2480 50  0001 C CNN
+	1    1710 2480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1710 2330 1710 2480
+Wire Wire Line
+	960  2130 1260 2130
+Wire Wire Line
+	2960 2130 3500 2130
+Connection ~ 2960 2130
+Wire Wire Line
+	2960 2430 3740 2430
+Wire Wire Line
+	2950 890  3740 890 
+Wire Wire Line
+	3300 1290 3300 1640
+Wire Wire Line
+	3740 2430 3740 1390
+Wire Wire Line
+	3740 1290 3300 1290
+Wire Wire Line
+	3500 2130 3500 1090
+Wire Wire Line
+	3500 1090 3740 1090
+Connection ~ 3740 1290
+Wire Wire Line
+	3740 1190 3740 1290
+Connection ~ 3740 1090
+Wire Wire Line
+	3740 990  3740 1090
+$Comp
+L Relay_SolidState:MOC3021M U3
+U 1 1 609E45E5
+P 2130 3230
+F 0 "U3" H 2130 3555 50  0000 C CNN
+F 1 "MOC3021M" H 2130 3464 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 1930 3030 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 2130 3230 50  0001 L CNN
+	1    2130 3230
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q3
+U 1 1 609E45EB
+P 3080 3280
+F 0 "Q3" H 3208 3326 50  0000 L CNN
+F 1 "BTA16-800BW" H 3208 3235 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3280 3205 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 3080 3280 50  0001 L CNN
+	1    3080 3280
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 609E45F1
+P 2780 3130
+F 0 "R7" V 2573 3130 50  0000 C CNN
+F 1 "200" V 2664 3130 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2710 3130 50  0001 C CNN
+F 3 "~" H 2780 3130 50  0001 C CNN
+	1    2780 3130
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2930 3130 3080 3130
+Wire Wire Line
+	2630 3130 2430 3130
+Wire Wire Line
+	2430 3330 2430 3380
+Wire Wire Line
+	2430 3380 2930 3380
+$Comp
+L Device:R R3
+U 1 1 609E45FB
+P 1530 3130
+F 0 "R3" V 1323 3130 50  0000 C CNN
+F 1 "100" V 1414 3130 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1460 3130 50  0001 C CNN
+F 3 "~" H 1530 3130 50  0001 C CNN
+	1    1530 3130
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1680 3130 1830 3130
+$Comp
+L power:GND #PWR03
+U 1 1 609E4602
+P 1830 3480
+F 0 "#PWR03" H 1830 3230 50  0001 C CNN
+F 1 "GND" H 1835 3307 50  0000 C CNN
+F 2 "" H 1830 3480 50  0001 C CNN
+F 3 "" H 1830 3480 50  0001 C CNN
+	1    1830 3480
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1830 3330 1830 3480
+Connection ~ 3080 3130
+Wire Wire Line
+	1080 3130 1380 3130
+Wire Wire Line
+	3080 2680 3080 3130
+Wire Wire Line
+	3430 3430 3080 3430
+$Comp
+L Connector:Screw_Terminal_01x06 J4
+U 1 1 609E460F
+P 4070 2880
+F 0 "J4" H 4150 2872 50  0000 L CNN
+F 1 "Screw_Terminal_01x06" H 4150 2781 50  0000 L CNN
+F 2 "newTerminal:BR_762K_6pin" H 4070 2880 50  0001 C CNN
+F 3 "~" H 4070 2880 50  0001 C CNN
+	1    4070 2880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Relay_SolidState:MOC3021M U4
+U 1 1 609E4615
+P 2140 4020
+F 0 "U4" H 2140 4345 50  0000 C CNN
+F 1 "MOC3021M" H 2140 4254 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_Socket" H 1940 3820 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MOC3023M-D.PDF" H 2140 4020 50  0001 L CNN
+	1    2140 4020
+	1    0    0    -1  
+$EndComp
+$Comp
+L Triac_Thyristor:BTA16-800BW Q4
+U 1 1 609E461B
+P 3090 4070
+F 0 "Q4" H 3218 4116 50  0000 L CNN
+F 1 "BTA16-800BW" H 3218 4025 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3290 3995 50  0001 L CIN
+F 3 "https://www.st.com/resource/en/datasheet/bta16.pdf" H 3090 4070 50  0001 L CNN
+	1    3090 4070
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 609E4621
+P 2790 3920
+F 0 "R8" V 2583 3920 50  0000 C CNN
+F 1 "200" V 2674 3920 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 2720 3920 50  0001 C CNN
+F 3 "~" H 2790 3920 50  0001 C CNN
+	1    2790 3920
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2940 3920 3090 3920
+Wire Wire Line
+	2640 3920 2440 3920
+Wire Wire Line
+	2440 4120 2440 4170
+Wire Wire Line
+	2440 4170 2940 4170
+$Comp
+L Device:R R4
+U 1 1 609E462B
+P 1540 3920
+F 0 "R4" V 1333 3920 50  0000 C CNN
+F 1 "100" V 1424 3920 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1470 3920 50  0001 C CNN
+F 3 "~" H 1540 3920 50  0001 C CNN
+	1    1540 3920
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1690 3920 1840 3920
+$Comp
+L power:GND #PWR04
+U 1 1 609E4632
+P 1840 4270
+F 0 "#PWR04" H 1840 4020 50  0001 C CNN
+F 1 "GND" H 1845 4097 50  0000 C CNN
+F 2 "" H 1840 4270 50  0001 C CNN
+F 3 "" H 1840 4270 50  0001 C CNN
+	1    1840 4270
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1840 4120 1840 4270
+Wire Wire Line
+	1090 3920 1390 3920
+Wire Wire Line
+	3090 3920 3630 3920
+Connection ~ 3090 3920
+Wire Wire Line
+	3090 4220 3870 4220
+Wire Wire Line
+	3430 3080 3430 3430
+Wire Wire Line
+	3870 4220 3870 3180
+Wire Wire Line
+	3870 3080 3430 3080
+Wire Wire Line
+	3630 3920 3630 2880
+Wire Wire Line
+	3630 2880 3870 2880
+Connection ~ 3870 3080
+Wire Wire Line
+	3870 2980 3870 3080
+Connection ~ 3870 2880
+Wire Wire Line
+	3870 2780 3870 2880
+Text Label 950  1340 0    50   ~ 0
+tr1
+Text Label 960  2130 0    50   ~ 0
+tr2
+Text Label 1080 3130 0    50   ~ 0
+tr3
+Text Label 1090 3920 0    50   ~ 0
+tr4
+Text Label 5190 1230 0    50   ~ 0
+tr5
+Text Label 5200 2020 0    50   ~ 0
+tr6
+Wire Wire Line
+	3080 2680 3870 2680
+Text Label 1800 4800 0    50   ~ 0
+tr1
+Text Label 1800 4900 0    50   ~ 0
+tr2
+Text Label 1800 5000 0    50   ~ 0
+tr3
+Text Label 1800 5100 0    50   ~ 0
+tr4
+Text Label 1800 5200 0    50   ~ 0
+tr5
+Text Label 1800 5300 0    50   ~ 0
+tr6
+Wire Wire Line
+	1800 4800 2000 4800
+Wire Wire Line
+	1800 4900 2000 4900
+Wire Wire Line
+	1800 5000 2000 5000
+Wire Wire Line
+	1800 5100 2000 5100
+Wire Wire Line
+	2000 5200 1800 5200
+Wire Wire Line
+	1800 5300 2000 5300
+Wire Wire Line
+	2000 5800 2000 5900
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 60AD2882
+P 2200 5800
+F 0 "J2" H 2172 5774 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 2172 5683 50  0000 R CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-02A_1x02_P2.50mm_Vertical" H 2200 5800 50  0001 C CNN
+F 3 "~" H 2200 5800 50  0001 C CNN
+	1    2200 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60AF0916
+P 1920 5900
+F 0 "#PWR05" H 1920 5650 50  0001 C CNN
+F 1 "GND" H 1925 5727 50  0000 C CNN
+F 2 "" H 1920 5900 50  0001 C CNN
+F 3 "" H 1920 5900 50  0001 C CNN
+	1    1920 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5900 1920 5900
+Connection ~ 2000 5900
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 609E63D2
+P 2200 5000
+F 0 "J1" H 2172 4974 50  0000 R CNN
+F 1 "Conn_01x06_Male" H 2172 4883 50  0000 R CNN
+F 2 "Connector_Molex:Molex_SPOX_5267-06A_1x06_P2.50mm_Vertical" H 2200 5000 50  0001 C CNN
+F 3 "~" H 2200 5000 50  0001 C CNN
+	1    2200 5000
+	-1   0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,2 @@
+go build
+./raspi_daemon
